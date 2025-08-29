@@ -10,6 +10,7 @@ int main()
   float area;
   float pib;
   int num_pontos_turisticos;
+  // Adicionando densidade populacional e pib per capita carta1
   float densidade_populacional;
   float pib_per_capita;
 
@@ -21,6 +22,7 @@ int main()
   float area2;
   float pib2;
   int num_pontos_turisticos2;
+  // Adicionando densidade populacional e pib per capita carta2
   float densidade_populacional2;
   float pib_per_capita2;
 
