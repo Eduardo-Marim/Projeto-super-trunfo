@@ -105,6 +105,15 @@ printf("*******Carta 2*******\n");
   printf(" A densidade populacional da carta 1 é maior que a da carta 2? %f\n", (densidade_populacional > densidade_populacional2));
   printf(" O PIB per capita da carta 1 é maior que o da carta 2? %f\n", (pib_per_capita > pib_per_capita2));
 
+  // Comparando as cartas
+  printf("****Comparação de população****\n");
+  if (populacao > populacao2){
+    printf("A carta 1,(%s ) tem a maior população.\n", nome_cidade);
+  }
+  else {
+    printf("A carta 2,(%s) tem a maior população.\n", nome_cidade2);
+  }
+
 
   return 0;
 }
