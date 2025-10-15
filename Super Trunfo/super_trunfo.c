@@ -95,24 +95,94 @@ printf("*******Carta 2*******\n");
   printf("Densidade Populacional: %.2f (hab/km²)\n", densidade_populacional2);
   printf("PIB per capita: R$ %.2f\n", pib_per_capita2);
 
-  // Comparação das cartas
-  printf("*****Comparação das cartas:*****\n");
-  printf("Super poder da carta 1 é maior que o da carta 2? %d\n", (super_poder > super_poder2));
-  printf(" A população da carta 1 é maior que a da carta 2? %d\n", (populacao > populacao2));
-  printf(" A área da carta 1 é maior que a da carta 2? %d\n", (area > area2));
-  printf(" O PIB da carta 1 é maior que o da carta 2? %d\n", (pib > pib2));
-  printf(" O número de pontos turísticos da carta 1 é maior que o da carta 2? %d\n", (num_pontos_turisticos > num_pontos_turisticos2));
-  printf(" A densidade populacional da carta 1 é maior que a da carta 2? %f\n", (densidade_populacional > densidade_populacional2));
-  printf(" O PIB per capita da carta 1 é maior que o da carta 2? %f\n", (pib_per_capita > pib_per_capita2));
+  // ***Comparação das cartas***
+  //printf("*****Comparação das cartas:*****\n");
+  //printf("Super poder da carta 1 é maior que o da carta 2? %d\n", (super_poder > super_poder2));
+  //printf(" A população da carta 1 é maior que a da carta 2? %d\n", (populacao > populacao2));
+  //printf(" A área da carta 1 é maior que a da carta 2? %d\n", (area > area2));
+  //printf(" O PIB da carta 1 é maior que o da carta 2? %d\n", (pib > pib2));
+  //printf(" O número de pontos turísticos da carta 1 é maior que o da carta 2? %d\n", (num_pontos_turisticos > num_pontos_turisticos2));
+  //printf(" A densidade populacional da carta 1 é maior que a da carta 2? %f\n", (densidade_populacional > densidade_populacional2));
+  //printf(" O PIB per capita da carta 1 é maior que o da carta 2? %f\n", (pib_per_capita > pib_per_capita2));
 
   // Comparando as cartas
   printf("****Comparação de população****\n");
   if (populacao > populacao2){
-    printf("A carta 1,(%s ) tem a maior população.\n", nome_cidade);
+    printf("A carta 1,(%s) tem a maior população.\n", nome_cidade);
   }
   else {
     printf("A carta 2,(%s) tem a maior população.\n", nome_cidade2);
   }
+
+  //Escolhendo atributo de comparação com switch
+  int atributo;
+  printf("Escolha o atributo para comparar entre as cartas:\n");
+  printf("1 - População\n");
+  printf("2 - Área\n");
+  printf("3 - PIB\n");
+  printf("4 - Número de pontos turísticos\n");
+  printf("5 - Densidade populacional\n");
+  scanf("%d", &atributo);
+  switch (atributo)
+  {
+  case 1:
+    if (populacao > populacao2)
+    {
+      printf("A carta 1,(%s) tem a maior população.\n", nome_cidade);
+    }
+    else
+    {
+      printf("A carta 2,(%s) tem a maior população.\n", nome_cidade2);
+    }
+    break;
+  case 2:
+    if (area > area2 )
+    {
+      printf("A carta 1,(%s) tem a maior área.\n", nome_cidade);
+    }
+    else
+    {
+      printf("A carta 2,(%s) tem a maior área.\n", nome_cidade2);
+    }
+    break;
+  case 3:
+    if (pib > pib2 )
+    {
+      printf("A carta 1 (%s) tem o maior PIB.\n", nome_cidade);
+    }  
+    else
+    {
+      printf("A carta 2 (%s) tem o maior PIB.\n", nome_cidade2);
+    }
+    break;
+  case 4:
+    if (num_pontos_turisticos > num_pontos_turisticos2 )
+    {
+      printf("A carta 1 (%s) tem o maior número de pontos turísticos.\n", nome_cidade);
+    }  
+    else
+    {
+      printf("A carta 2 (%s) tem o maior número de pontos turísticos.\n", nome_cidade2);
+    }
+    break;
+  case 5:
+    if (densidade_populacional > densidade_populacional2 )
+    {
+      printf("A carta 1 (%s) tem a maior densidade populacional. Então ela perdeu\n", nome_cidade);
+      printf("A carta 2 (%s) ganhou por ter a menor densidade populacional.\n", nome_cidade2);
+    }  
+    else
+    {
+      printf("A carta 2 (%s) tem a maior densidade populacional. Então ela perdeu\n", nome_cidade2);
+      printf("A carta 1 (%s) ganhou por ter a menor densidade populacional.\n", nome_cidade);
+    }
+    break;
+  
+  default:
+  printf("Atributo inválido.\n");
+    break;
+  }
+
 
 
   return 0;
