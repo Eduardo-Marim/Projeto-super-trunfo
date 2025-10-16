@@ -106,7 +106,7 @@ printf("*******Carta 2*******\n");
   //printf(" O PIB per capita da carta 1 é maior que o da carta 2? %f\n", (pib_per_capita > pib_per_capita2));
 
   // Comparando as cartas
-  printf("****Comparação de população****\n");
+ /* printf("****Comparação de população****\n");
   if (populacao > populacao2){
     printf("A carta 1,(%s) tem a maior população.\n", nome_cidade);
   }
@@ -181,9 +181,154 @@ printf("*******Carta 2*******\n");
   default:
   printf("Atributo inválido.\n");
     break;
+  }*/
+
+  // Comparando duas cartas
+  int atributo, atributo2;
+  printf("Escolha o primeiro atributo para comparar entre as cartas:\n");
+  printf("1 - População\n");
+  printf("2 - Área\n");
+  printf("3 - PIB\n");
+  printf("4 - Número de pontos turísticos\n");
+  printf("5 - Densidade populacional\n");
+  scanf("%d", &atributo);
+
+  printf("\n");
+
+  printf("Escolha o segundo atributo para comparar entre as cartas:\n");
+  printf("Não escolha o mesmo atributo do primeiro.\n");
+  printf("1 - População\n");
+  printf("2 - Área\n");
+  printf("3 - PIB\n");
+  printf("4 - Número de pontos turísticos\n");
+  printf("5 - Densidade populacional\n");
+  scanf("%d", &atributo2); 
+  
+  printf("\n");
+
+  atributo == atributo2 ? printf("Atributos iguais. Escolha atributos diferentes.\n") : printf("Atributos diferentes. Vamos comparar!\n");
+  if (atributo != atributo2){
+    switch (atributo)
+    {
+    case 1:
+      if (populacao > populacao2)
+      {
+        printf("A carta 1,(%s) tem a maior população.\n", nome_cidade);
+      }
+      else
+      {
+        printf("A carta 2,(%s) tem a maior população.\n", nome_cidade2);
+      }
+      break;
+    case 2:
+      if (area > area2 )
+      {
+        printf("A carta 1,(%s) tem a maior área.\n", nome_cidade);
+      }
+      else
+      {
+        printf("A carta 2,(%s) tem a maior área.\n", nome_cidade2);
+      }
+      break;
+    case 3:
+      if (pib > pib2 )
+      {
+        printf("A carta 1 (%s) tem o maior PIB.\n", nome_cidade);
+      }  
+      else
+      {
+        printf("A carta 2 (%s) tem o maior PIB.\n", nome_cidade2);
+      }
+      break;
+    case 4:
+      if (num_pontos_turisticos > num_pontos_turisticos2 )
+      {
+        printf("A carta 1 (%s) tem o maior número de pontos turísticos.\n", nome_cidade);
+      }  
+      else
+      {
+        printf("A carta 2 (%s) tem o maior número de pontos turísticos.\n", nome_cidade2);
+      }
+      break;
+    case 5:
+      if (densidade_populacional > densidade_populacional2 )
+      {
+        printf("A carta 1 (%s) tem a maior densidade populacional. Então ela perdeu\n", nome_cidade);
+        printf("A carta 2 (%s) ganhou por ter a menor densidade populacional.\n", nome_cidade2);
+      }  
+      else
+      {
+        printf("A carta 2 (%s) tem a maior densidade populacional. Então ela perdeu\n", nome_cidade2);
+        printf("A carta 1 (%s) ganhou por ter a menor densidade populacional.\n", nome_cidade);
+      }
+      break;
+    
+    default:
+    printf("Atributo inválido.\n");
+      break;
+    }
+
+    switch (atributo2)
+    {
+    case 1:
+      if (populacao > populacao2)
+      {
+        printf("A carta 1,(%s) tem a maior população.\n", nome_cidade);
+      }
+      else
+      {
+        printf("A carta 2,(%s) tem a maior população.\n", nome_cidade2);
+      }
+      break;
+    case 2:
+    if (area > area2 )
+      {
+        printf("A carta 1,(%s) tem a maior área.\n", nome_cidade);
+      }
+      else
+      {
+        printf("A carta 2,(%s) tem a maior área.\n", nome_cidade2);
+      }
+      break;
+    case 3:
+    if (pib > pib2 )      
+      {
+        printf("A carta 1 (%s) tem o maior PIB.\n", nome_cidade);
+      }  
+      else
+      {
+        printf("A carta 2 (%s) tem o maior PIB.\n", nome_cidade2);
+      }
+      break;
+    case 4:
+    if (num_pontos_turisticos > num_pontos_turisticos2 )
+      {
+        printf("A carta 1 (%s) tem o maior número de pontos turísticos.\n", nome_cidade);
+      }  
+      else
+      {
+        printf("A carta 2 (%s) tem o maior número de pontos turísticos.\n", nome_cidade2);
+      }
+      break;
+    case 5:
+    if (densidade_populacional > densidade_populacional2 )  
+      {
+        printf("A carta 1 (%s) tem a maior densidade populacional. Então ela perdeu\n", nome_cidade);
+        printf("A carta 2 (%s) ganhou por ter a menor densidade populacional.\n", nome_cidade2);
+      }  
+      else
+      {
+        printf("A carta 2 (%s) tem a maior densidade populacional. Então ela perdeu\n", nome_cidade2);
+        printf("A carta 1 (%s) ganhou por ter a menor densidade populacional.\n", nome_cidade);
+      }
+      break;
+      default:
+      printf("Atributo inválido.\n"); 
+      break;
+    }
+      printf("\n");
+      printf("Fim da comparação.\n");
   }
-
-
 
   return 0;
 }
